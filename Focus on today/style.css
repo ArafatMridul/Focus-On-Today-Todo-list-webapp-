@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html , body{
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+}
+
+img,
+picture,
+svg {
+    display: block;
+    max-width: 100%
+}
+
+h1, 
+h2, 
+h3, 
+h4 {
+    margin: 0;
+}
+
+imput,
+textarea,
+button,
+select {
+    font: inherit;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+main {
+    background-color: #48A30012;
+    min-height: 100vh;
+    padding: 1rem;
+}
+
+/* H1 HEADING STYLE */
+h1 {
+    color: #48A300;
+    font-size: 2rem;
+    font-size: clamp(2rem, 1.4285714285714286rem + 2.857142857142857vw, 4rem);
+    font-weight: 700;
+    line-height: 96px;
+    text-align: center;
+    padding-top: 36px;
+
+}
+
+h1 span {
+    color: #61481C;
+}
+
+/* SUN STYLE */
+.sun_img {
+    height: 50px;
+    width: 50px;
+    position: relative;
+}
+
+.sun_img img {
+    position: absolute;;
+}
+
+.eye-left, 
+.eye-right {
+    height: 2.59px;
+    width: 2.59px;
+}
+
+.eye-right {
+    top: 20.69px;
+    bottom: 28.02px;
+    right: 19.62px;
+    left: 29.09px;
+}
+
+.eye-left {
+    top: 20.69px;
+    bottom: 28.02px;
+    left: 19.62px;
+    right: 29.09px;
+}
+
+.mouth {
+    height: 5.17px;
+    width: 5.17px;
+    top: 25.21px;
+    bottom: 19.62px;
+    right: 22.2px;
+    left: 22.62px;
+}
+
+.bg {
+    animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* CONTAINER STYLE */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 660px;
+    padding: 32px 48px;
+    background-color: #FBFBFB;
+    margin-inline: auto;
+    border-radius: 16px;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.heading h2 {
+    font-size: 1.5rem;
+    font-size: clamp(1.5rem, 1.3571428571428572rem + 0.7142857142857143vw, 2rem);
+    font-weight: 700;
+    line-height: 48px;
+    text-align: left;
+}
+
+.progress-bar {
+    margin-top: 48px;
+}
+
+.progress-bar p {
+    color: #858585;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: left;
+}
+
+.bar {
+    height: 30px;
+    display: flex;
+    align-items: center;  
+    background-color: #48A3001A;
+    border-radius: 16px;
+    margin-block: 18px;
+    overflow: hidden;
+}
+
+.bar-value {
+    height: inherit;
+    background-color: #48A300;
+    border-radius: inherit;
+    transition: width 0.5s ease-in-out;
+}
+
+.bar p{
+    position: absolute;;
+    font-size: 10px;
+    font-weight: 500;
+    color: #EEFFE0;
+    line-height: 15px;
+    text-align: left;
+    margin-left: 1rem;
+}
+
+/* GOALS SECTION STYLE */
+.goals-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.error-label {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    font-weight: 400;
+    color: #FF5151;
+    line-height: 21px;
+    text-align: left;
+}
+
+.error .error-label {
+    display: block;
+}
+
+.added-goals {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 36px;
+}
+
+.goal {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 32px 24px;
+    border-radius: 16px;
+    background-color: #fff;
+    border: 1px solid #0000001A;
+}
+
+.completed .radio-btn {
+    background-color: #48A300;
+    border: 2px solid #48A300;
+    background-image: url(./assets/tick.svg);
+    background-size: cover;
+}
+
+.radio-btn {
+    flex-shrink: 0;
+    height: 24px;
+    width: 24px;
+    border: 2px solid #61481C4D;
+    border-radius: 50%;
+}
+
+.radio-btn:hover {
+    cursor: pointer;
+}
+
+.radio-btn img {
+    width: 100%;
+    object-fit: cover;
+}
+
+input[type="text"] {
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: left;
+    border: none;
+    align-self: stretch;
+}
+
+.completed input[type="text"] {
+    color: #48A300;
+    text-decoration: line-through #48A300;
+}
+
+input[type="text"]::placeholder {
+    color: #D9D9D9;
+}
+
+
+input[type="text"]:focus {
+    border: none;
+    outline: none;
+}
+
+.btm-para {
+    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.6785714285714286rem + 0.35714285714285715vw, 1rem);
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    margin-top: 54px;
+}
